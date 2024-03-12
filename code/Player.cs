@@ -8,11 +8,11 @@ public sealed class Player : Component
 	public int Energy {get; set;}
 	public Deck MyDeck {get; set;}
 
-	public Player()
+	public Player(int lp, int en, Deck deck)
 	{
-		LifePoints = 20;
-		Energy = 3;
-		MyDeck = new Deck();
+		LifePoints = lp;
+		Energy = en;
+		MyDeck = deck;
 	}
 
 	public void PlayCard(Card card, Enemy enemy)

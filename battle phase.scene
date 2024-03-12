@@ -4,7 +4,7 @@
     {
       "Id": "cb9dfb19-02e0-4f2b-88c4-ca57eefe50e5",
       "Name": "Main Camera",
-      "Position": "-300,0,100",
+      "Position": "-800,0,0",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
@@ -14,7 +14,7 @@
           "ClearFlags": "All",
           "FieldOfView": 60,
           "IsMainCamera": true,
-          "Orthographic": false,
+          "Orthographic": true,
           "OrthographicHeight": 1204,
           "Priority": 1,
           "RenderExcludeTags": "",
@@ -23,6 +23,9 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
+        },
+        {
+          "__type": "MouseCast"
         }
       ]
     },
@@ -76,10 +79,10 @@
     },
     {
       "Id": "910668f0-74a4-4f43-9c4c-eed2c257c0f7",
-      "Name": "Plane",
-      "Position": "-0.000000000002728484,0.000000000001031618,98.98843",
-      "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
-      "Scale": "0.2,0.2,0.2",
+      "Name": "Card",
+      "Position": "0,-0.0000001411555,-320",
+      "Rotation": "0.7071068,-0.00000003090862,-0.7071068,-0.00000003090862",
+      "Scale": "4,2,1",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
@@ -89,6 +92,16 @@
           "Model": "models/dev/plane.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "CardObject"
+        },
+        {
+          "__type": "PlaneCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "93.20007,86.70007",
+          "Static": true
         }
       ]
     }
@@ -116,6 +129,6 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-12T02:31:19.4079277-06:00",
+  "LastSaved": "2024-03-12T03:44:33.2833727-06:00",
   "__references": []
 }
