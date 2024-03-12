@@ -48,12 +48,47 @@
     {
       "Id": "864d77ee-83e2-4e4d-8826-dd7ac07fda5e",
       "Name": "Battle Manager",
-      "Position": "256.7952,0,100",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
         {
           "__type": "BattleManager"
+        }
+      ]
+    },
+    {
+      "Id": "3d934eec-9811-4b80-9bab-5608bcd12d00",
+      "Name": "UI",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "PlayerUI"
+        }
+      ]
+    },
+    {
+      "Id": "910668f0-74a4-4f43-9c4c-eed2c257c0f7",
+      "Name": "Plane",
+      "Position": "-0.000000000002728484,0.000000000001031618,98.98843",
+      "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+      "Scale": "0.2,0.2,0.2",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
         }
       ]
     }
@@ -81,6 +116,6 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-12T00:23:00.0657619-06:00",
+  "LastSaved": "2024-03-12T02:31:19.4079277-06:00",
   "__references": []
 }
