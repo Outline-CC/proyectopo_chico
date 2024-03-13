@@ -83,6 +83,7 @@
       "Position": "0,-0.0000001411555,-320",
       "Rotation": "0.7071068,-0.00000003090862,-0.7071068,-0.00000003090862",
       "Scale": "4,2,1",
+      "Tags": "card,usable",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
@@ -129,6 +130,6 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-12T03:44:33.2833727-06:00",
+  "LastSaved": "2024-03-12T23:24:00.4168939-06:00",
   "__references": []
 }
