@@ -9,16 +9,16 @@ public sealed class MouseCast : Component
 		if (Input.Pressed("attack1"))
 		{
 			Log.Info("CLIC");
-			Vector3 mousePos = Mouse.Position;
-			Log.Info(mousePos);
-			Vector3 rayDirection = Transform.Local.PointToWorld(mousePos);
-			Log.Info(rayDirection);
-			var ray = Scene.Trace.Ray(mousePos, mousePos + rayDirection * 1000.0f).Size(1.0f).UseHitboxes().Run();
-			Gizmo.Draw.Arrow(mousePos, mousePos + rayDirection * 1000.0f);
+			var mouseray = Scene.Camera.ScreenPixelToRay(Mouse.Position);
+			Log.Info(mouseray);
+			SceneTraceResult ray = Scene.Trace.Ray(mouseray.Position, mouseray.Forward * int.MaxValue).Run();
 			if (ray.Hit)
 			{
-				Log.Info(ray);
-			} else Log.Warning("didn't hit anything");
+    			Log.Info(ray.GameObject);
+    			Gizmo.Draw.SolidSphere(ray.HitPosition, 30.0f);
+			}
+			else Log.Warning("didn't hit anything");
+			Log.Info("CLIC2");
 		}
 	}
 
