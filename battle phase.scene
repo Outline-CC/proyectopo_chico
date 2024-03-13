@@ -30,6 +30,24 @@
       ]
     },
     {
+      "Id": "3d934eec-9811-4b80-9bab-5608bcd12d00",
+      "Name": "UI",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "PlayerUI"
+        }
+      ]
+    },
+    {
       "Id": "57210aeb-ccf2-494d-a2ac-beda10e81da1",
       "Name": "Directional Light",
       "Position": "0,0,200",
@@ -55,54 +73,12 @@
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "BattleManager"
-        }
-      ]
-    },
-    {
-      "Id": "3d934eec-9811-4b80-9bab-5608bcd12d00",
-      "Name": "UI",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "ScreenPanel",
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        },
-        {
-          "__type": "PlayerUI"
-        }
-      ]
-    },
-    {
-      "Id": "910668f0-74a4-4f43-9c4c-eed2c257c0f7",
-      "Name": "Card",
-      "Position": "0,-0.0000001411555,-320",
-      "Rotation": "0.7071068,-0.00000003090862,-0.7071068,-0.00000003090862",
-      "Scale": "4,2,1",
-      "Tags": "card,usable",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "CardObject"
-        },
-        {
-          "__type": "PlaneCollider",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "93.20007,86.70007",
-          "Static": true
+          "__type": "DeckManager",
+          "CardPrefab": {
+            "_type": "gameobject",
+            "prefab": "code/card prefab.prefab"
+          },
+          "Cards": []
         }
       ]
     }
@@ -130,6 +106,6 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-12T23:24:00.4168939-06:00",
+  "LastSaved": "2024-03-13T02:39:17.2763141-06:00",
   "__references": []
 }
