@@ -1,8 +1,8 @@
 {
-  "Id": "873bd037-7f1d-4f00-b884-8fcba4f254f5",
+  "Id": "c84c0eed-8915-4e56-be04-59ac85660ced",
   "GameObjects": [
     {
-      "Id": "cb9dfb19-02e0-4f2b-88c4-ca57eefe50e5",
+      "__guid": "cb9dfb19-02e0-4f2b-88c4-ca57eefe50e5",
       "Name": "Main Camera",
       "Position": "-800,0,0",
       "Enabled": true,
@@ -10,6 +10,7 @@
       "Components": [
         {
           "__type": "CameraComponent",
+          "__guid": "37bba415-6e58-4f11-b52f-b14936fe9706",
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
@@ -25,30 +26,33 @@
           "ZNear": 10
         },
         {
-          "__type": "MouseCast"
+          "__type": "MouseCast",
+          "__guid": "44e0f377-47e5-4e37-82e8-afcac5d31d3d"
         }
       ]
     },
     {
-      "Id": "3d934eec-9811-4b80-9bab-5608bcd12d00",
+      "__guid": "3d934eec-9811-4b80-9bab-5608bcd12d00",
       "Name": "UI",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
         {
           "__type": "ScreenPanel",
+          "__guid": "1745251b-3738-4de2-b302-407883c61ca1",
           "AutoScreenScale": true,
           "Opacity": 1,
           "Scale": 1,
           "ZIndex": 100
         },
         {
-          "__type": "PlayerUI"
+          "__type": "PlayerUI",
+          "__guid": "4a525596-b92a-4b1b-b6fe-f627f5c60082"
         }
       ]
     },
     {
-      "Id": "57210aeb-ccf2-494d-a2ac-beda10e81da1",
+      "__guid": "57210aeb-ccf2-494d-a2ac-beda10e81da1",
       "Name": "Directional Light",
       "Position": "0,0,200",
       "Rotation": "-0.2459842,0.5938582,0.2931525,0.7077327",
@@ -58,6 +62,7 @@
       "Components": [
         {
           "__type": "DirectionalLight",
+          "__guid": "8b5625f8-f3a0-4720-994c-98873c1c8055",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
@@ -67,16 +72,17 @@
       ]
     },
     {
-      "Id": "864d77ee-83e2-4e4d-8826-dd7ac07fda5e",
+      "__guid": "864d77ee-83e2-4e4d-8826-dd7ac07fda5e",
       "Name": "Battle Manager",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
         {
           "__type": "DeckManager",
+          "__guid": "e9fdb6a7-c17e-461b-a525-89d154a7c43e",
           "CardPrefab": {
             "_type": "gameobject",
-            "prefab": "code/card prefab.prefab"
+            "prefab": "prefabs/card_prefab.prefab"
           },
           "Cards": []
         }
@@ -106,6 +112,6 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-13T02:39:17.2763141-06:00",
+  "LastSaved": "2024-03-13T21:25:41.1069298-06:00",
   "__references": []
 }
