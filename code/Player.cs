@@ -33,6 +33,7 @@ public class Player : Component
 		DrawCards( 5 );
 	}
 
+
 	private void DrawCards( int numberOfCards )
 	{
 		Log.Info( "DRAW CARDS" );
