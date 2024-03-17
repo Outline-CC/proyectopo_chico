@@ -1,0 +1,35 @@
+{
+  "RootObject": {
+    "__guid": "a9cdcf7b-5b95-4704-bd2b-c5fb6e2bcca3",
+    "Name": "CARD",
+    "Position": "-374.9976,705.1364,83.72582",
+    "Scale": "4.508951,4.508951,4.508951",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "__guid": "4cc477d9-40dc-4e5a-83ac-067b8db5af12",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/dev/box.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Card",
+        "__guid": "81ba7a4e-3a4b-4657-a2ab-da8aedd673aa",
+        "Description": "Lorem Ipsum",
+        "EffectImpact": 6,
+        "EnergyCost": 1,
+        "Name": "Strike",
+        "Type": "Attack"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
