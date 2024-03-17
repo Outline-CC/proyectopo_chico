@@ -1,0 +1,1031 @@
+{
+  "__guid": "b3be0ac6-b24d-4425-8077-0019bc4929cd",
+  "GameObjects": [
+    {
+      "__guid": "68477914-5c00-4c30-8397-5b84870c255d",
+      "Name": "Main Camera",
+      "Position": "-1278.946,63.81625,485.9562",
+      "Rotation": "0,-0.00424826,0,0.999991",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__guid": "6f3d961c-2b0e-4ad9-ab51-f4a9a97241b9",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "Pixelate",
+          "__guid": "4408043c-17fa-4c93-9125-b7dc4cb980f3",
+          "Scale": 0
+        }
+      ]
+    },
+    {
+      "__guid": "c5f0b315-9d08-4e26-b9cd-c0aaf23d93a9",
+      "Name": "Point Light",
+      "Position": "898.3117,-257.4394,1086.635",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "PointLight",
+          "__guid": "63d1913d-16e6-4600-9687-e6f3beeeb33d",
+          "Attenuation": 0.4,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 500,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "49fab382-f7dd-4cc7-bb6a-ada1fb88dd6e",
+      "Name": "Point Light (3)",
+      "Position": "256,512,1086.635",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "PointLight",
+          "__guid": "10c53bae-8953-4d1f-acca-268b229f8c37",
+          "Attenuation": 0.4,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 500,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "6f42d9c6-520a-404c-af4e-221899ec2005",
+      "Name": "Spot Light",
+      "Position": "-626.1975,-12.88461,541.5382",
+      "Rotation": "0,0.3427642,0,0.9394215",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "__guid": "c86f13a6-3ba9-4da4-88a7-190851294933",
+          "Attenuation": 0.11,
+          "ConeInner": 90,
+          "ConeOuter": 67.34,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "0d03fb94-a802-48b9-a55d-d54075f3f6bd",
+      "Name": "Spot Light (2)",
+      "Position": "-11.2704,-888.0262,861.4807",
+      "Rotation": "0,0.258819,0,0.9659259",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "__guid": "f5338bd4-1d80-4f26-8176-3b62cdeed0b7",
+          "Attenuation": 0.11,
+          "ConeInner": 90,
+          "ConeOuter": 67.34,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "a3e0c88c-eaab-456c-bec0-6cb1629c173d",
+      "Name": "Spot Light (3)",
+      "Position": "-11.2704,858.6525,818.1204",
+      "Rotation": "0,0.3826834,0,0.9238796",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "__guid": "08f2c4b7-c560-4688-bc65-0ff39e19c953",
+          "Attenuation": 0.11,
+          "ConeInner": 90,
+          "ConeOuter": 67.34,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "cb57f751-42ad-4840-99c7-f65cfd67c9e2",
+      "Name": "Spot Light (1)",
+      "Position": "453.9431,24.65544,1000.026",
+      "Rotation": "0,0.5,0,0.8660254",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "__guid": "d28520f5-856c-4a2b-af91-672ceba1e026",
+          "Attenuation": 0.26,
+          "ConeInner": 90,
+          "ConeOuter": 69.31,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "ed66328a-fe13-4529-aad1-9632a9aa3dab",
+      "Name": "Spot Light (4)",
+      "Position": "960,85.72267,832",
+      "Rotation": "0,0.3826835,0,0.9238796",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "__guid": "78119f73-4edc-4716-8247-f30a087bdf66",
+          "Attenuation": 1.06,
+          "ConeInner": 90,
+          "ConeOuter": 79.82,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "04e2a19f-34e1-43bb-8605-4b1c6dc85a32",
+      "Name": "Spot Light (6)",
+      "Position": "1639.87,85.72267,480.593",
+      "Rotation": "0,0.5,0,0.8660254",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "__guid": "e03e58ff-10d4-4e22-b085-d6c4d45329bd",
+          "Attenuation": 1.06,
+          "ConeInner": 90,
+          "ConeOuter": 79.82,
+          "FogMode": "Disabled",
+          "FogStrength": 0,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "dba14e94-bfb9-4e30-8728-36a1e4b18a33",
+      "Name": "Spot Light (5)",
+      "Position": "522.8156,85.72267,539.1872",
+      "Rotation": "0,0.5,0,0.8660254",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "__guid": "5592a9f6-b301-497b-a880-5e028827cfb7",
+          "Attenuation": 0.26,
+          "ConeInner": 90,
+          "ConeOuter": 69.31,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "ee73b35b-4274-4a0c-ae98-d3668ab3fc89",
+      "Name": "Point Light",
+      "Position": "1087.549,486.4571,655.8094",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "PointLight",
+          "__guid": "14403b1b-f09f-4d82-a543-44139569d59b",
+          "Attenuation": 0.04,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "d3e23efd-fe9b-41fb-b0ec-de78b005c134",
+      "Name": "Point Light (1)",
+      "Position": "1087.549,-1016.633,655.8094",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "PointLight",
+          "__guid": "29019ed1-3dd2-4da4-8768-bab69e65614c",
+          "Attenuation": 0.04,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "6e1222b3-9191-4b3b-93a2-68c69a5aee16",
+      "Name": "Point Light (2)",
+      "Position": "1087.549,-189.9055,196.0998",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "PointLight",
+          "__guid": "bddeb557-42d0-4e33-925f-e1490c900996",
+          "Attenuation": 0.04,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1000,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "a077ed97-a047-44b1-bc39-8ade8c1e884c",
+      "Name": "sm_background_base",
+      "Position": "1563.935,0,0",
+      "Rotation": "0,0,0.7071068,-0.7071068",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "138ecc2f-8e3e-4c43-a668-d9a4c93d2f48",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/sm_background_base.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "ed136207-dfc8-413e-93ce-9f3b46a7fb0f",
+          "IsTrigger": false,
+          "Model": "models/sm_background_base.vmdl",
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "6d8d1142-1280-487c-8395-169d1f5450ce",
+      "Name": "sm_rock1",
+      "Position": "657.2789,704,147.5779",
+      "Rotation": "0,0,-0.6084796,0.7935696",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "8a97e9bb-81e4-49d0-a6a7-75aed3205d80",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock1.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "e3c7fe03-e4e1-4a08-9abd-59e66007225e",
+      "Name": "sm_rock10",
+      "Position": "768,-256,64",
+      "Rotation": "0.6813875,0.7070716,0.007056676,0.1889738",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "8156f9b2-860f-4fa1-bf55-0071923e4e81",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock10.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "cb2f3a35-88a5-4a28-8e1d-fdd269141b9a",
+      "Name": "sm_rock2",
+      "Position": "1600,384,64",
+      "Rotation": "0.1105277,0.06943144,-0.8395408,0.5273841",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "dd95a06c-fdaa-43ce-b22f-da97ab6aed9f",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock2.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "bf94c829-600d-4012-9847-ad9ef54f8534",
+      "Name": "sm_rock2 (3)",
+      "Position": "1034.509,363.9527,25.92334",
+      "Rotation": "-0.134259,-0.08296216,-0.8400306,0.5190763",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "5eb0949a-6472-4541-84cd-e50333d9fe1c",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock2.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "a9ca97fe-3373-479d-90f2-dfb7df96967c",
+      "Name": "sm_rock2 (5)",
+      "Position": "1272.475,363.9527,20.0331",
+      "Rotation": "0.1441163,0.270132,-0.4480997,0.83992",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "3f843f60-0c7e-4d1d-816a-4a29b13bc55f",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock2.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "e45a471b-ecb2-46b7-b447-5bd3503542ef",
+      "Name": "sm_rock2 (4)",
+      "Position": "1034.509,-419.5752,25.92334",
+      "Rotation": "0.127556,0.06470678,-0.882645,0.44775",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "28fe6926-12a6-4d52-a91e-53696f19b721",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock2.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "02b53139-c665-42aa-84ff-bcb6cec4ff60",
+      "Name": "sm_rock2 (2)",
+      "Position": "1216,-320,64",
+      "Rotation": "0.07841451,0.1043468,-0.5956168,0.7925928",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "9870311f-190c-462a-a8c0-fc5f9c0fd673",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock2.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "43ab1a9d-a398-4ab5-9362-9d12fb590786",
+      "Name": "sm_rock2 (1)",
+      "Position": "1536,-448,64",
+      "Rotation": "-0.09229586,-0.09229591,-0.7010573,0.7010573",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "32852707-f59c-4bb1-b4cc-6d84371756e9",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock2.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "85badbf3-d317-4ac6-8377-a220fd6f4d77",
+      "Name": "sm_rock2",
+      "Position": "512,-640,64",
+      "Rotation": "0.08147512,0.05767526,0.821926,-0.560779",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "bf217ed8-4500-4909-b129-a9bbe3815b4d",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock2.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "bf9f16e9-e96d-4859-8b7a-40bfeff88f9b",
+      "Name": "sm_rock3",
+      "Position": "512,-896,64",
+      "Rotation": "-0.02919214,-0.01030762,0.9247882,-0.3792208",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "9d7d1f56-c215-4f2e-90f8-21a399c901ff",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock3.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "7d38d2d6-3921-47e3-8a8f-a4e8e692255f",
+      "Name": "sm_rock3 (1)",
+      "Position": "420.306,-1138.55,64",
+      "Rotation": "-0.02868072,-0.01165524,0.9061345,-0.4218553",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "9bccc1d9-c762-4455-a6a6-d59c9a5b6edf",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock3.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "18561989-a829-4e37-ab0e-0f4312398269",
+      "Name": "sm_rock3 (2)",
+      "Position": "420.306,1094.027,64",
+      "Rotation": "-0.01043408,-0.02914718,0.2896869,-0.9566206",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "1751efe9-2378-4075-868b-8a8a45d9ea1d",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock3.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "6af6c121-222d-42f6-987e-85e5fe2b38a9",
+      "Name": "sm_rock3 (3)",
+      "Position": "420.306,814.7131,64",
+      "Rotation": "-0.02047048,-0.02322472,0.6228232,-0.78175",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "8904b8ed-9ad6-46f1-9624-9fed7b5535f7",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock3.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "84ab46a4-9c09-4c8c-a09b-c42b874c32ae",
+      "Name": "sm_rock4",
+      "Position": "512,576,576",
+      "Rotation": "-0.7071069,-0.7071068,0,0.00000008195639",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "9be558dc-e5ab-4683-9e49-d2a8a002f4fa",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock4.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "33cf287e-f760-49c4-ab58-bc1277775614",
+      "Name": "sm_rock5",
+      "Position": "512,832,640",
+      "Rotation": "0.0000000001847699,-0.0000000001847699,-0.7071067,0.7071068",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "c788468d-ce31-4bb5-9764-1a9efac6bfb3",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock5.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "341d9373-ddab-4c54-8221-072decd25097",
+      "Name": "sm_rock6",
+      "Position": "960,-576,704",
+      "Rotation": "-0.1141471,-0.06330492,-0.8670335,0.480849",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "d8e89981-512b-4ef5-93d6-59728fff561d",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock6.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "d03b0b4f-f9a6-4d36-af4d-a2ed465c4be2",
+      "Name": "sm_rock6 (1)",
+      "Position": "1344,-448,704",
+      "Rotation": "0.07446516,0.1072009,-0.5656188,0.8142716",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "d8523b6a-2964-43ed-959e-41df91fc2aa4",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock6.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "c0c8b572-3a5f-4d8f-8757-8f5241d28171",
+      "Name": "sm_rock7",
+      "Position": "1472,256,896",
+      "Rotation": "-0.7010574,-0.7010574,0.09229583,-0.09229583",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "7aaa8158-ee38-4367-a191-6227413b64bc",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock7.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "f7e3306f-bd74-490e-a2cf-038eb814143d",
+      "Name": "sm_rock7 (1)",
+      "Position": "1472,-192,896",
+      "Rotation": "-0.6830127,-0.6830127,-0.1830128,0.1830128",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "fdf89830-48fe-43e6-8c30-1cb3d0b00fcb",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock7.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "8c7d5e7e-3f2f-46ef-a52f-69fab229e145",
+      "Name": "sm_rock8",
+      "Position": "585.0005,-700.8031,127.9999",
+      "Rotation": "0.0000000002175791,-0.0000000001447037,-0.5537751,0.8326662",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "3b4862be-e297-4597-b895-6592d8b07eff",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock8.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "bd595c70-e49c-464e-8f50-9b4bf3849049",
+      "Name": "sm_rock8 (1)",
+      "Position": "256,832,128",
+      "Rotation": "0.0000000002206847,-0.0000000001399218,-0.5354747,0.8445512",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "8c24a960-2975-439b-a702-eec132745ca7",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock8.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "eaeabe80-7b92-41f4-94c6-76ce71d5e381",
+      "Name": "sm_rock8 (2)",
+      "Position": "384,704,128",
+      "Rotation": "0.0000000001606468,-0.0000000002060884,-0.7886919,0.6147887",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "9f42c83c-f3d9-4923-84fb-b103ed1f6ba0",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock8.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "fa6c9f2d-ad6c-4132-9e6e-03f868d03abc",
+      "Name": "sm_rock9",
+      "Position": "704,-576,192",
+      "Rotation": "0.0000000001394811,-0.0000000002209635,-0.8456179,0.5337886",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "0039cca1-187b-4131-859f-3cd4e99f2a6f",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock9.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "251c9d63-b4e0-4cc3-b942-0ccb500ac9c3",
+      "Name": "sm_rock9 (1)",
+      "Position": "704,512,-64",
+      "Rotation": "0.09229596,0.09229594,-0.7010573,0.7010574",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "6f183395-6636-4368-bcb3-163218e78047",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/sm_rock9.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "64c448f4-fed3-40fc-9871-b164ed0cc6a2",
+      "Name": "Sun",
+      "Rotation": "0,0.7071067,0,0.7071068",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__guid": "9a6bfecd-5ac5-40b3-866a-97d65f51cb01",
+          "FogMode": "Disabled",
+          "FogStrength": 0,
+          "LightColor": "0.33021,0.49302,0.4876,1",
+          "Shadows": false,
+          "SkyColor": "0,0.66667,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "1a669b9a-5f25-4229-ab42-3d0cfff36899",
+      "Name": "sm_stream",
+      "Position": "1600,-82.83936,6.22032",
+      "Rotation": "0.001505501,-0.001505501,-0.7071051,0.7071052",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "1bb98a0b-2aeb-4e43-9732-9b61816c6a83",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/dev/error.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "0261f0d6-f5b9-46c9-8256-ad188fa819b6",
+      "Name": "sm_stream",
+      "Position": "1520.947,-98.81783,13.30297",
+      "Rotation": "-0.0000000009466578,-0.0000000009466578,0.7071068,-0.7071068",
+      "Scale": "1,0.97,1",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "9baee390-98c1-40fb-88ab-b29db132dae0",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/props/sm_stream.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "42159865-ac99-445b-a2e2-9818edf71e85",
+      "Name": "crt_ant",
+      "Position": "0,4288,640",
+      "Rotation": "0.0000000001847699,-0.0000000001847699,-0.7071068,0.7071068",
+      "Scale": "2,2,2",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "56cec121-fc9c-4865-b6e8-3a9f8067bed0",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/characters/model/crt_ant.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "d7660a09-9171-49fc-9598-1fe88ef57329",
+      "Name": "crt_topo",
+      "Position": "0,3776,640",
+      "Rotation": "0.0000000001847699,-0.0000000001847699,-0.7071068,0.7071068",
+      "Scale": "2,2,2",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "79024044-2603-4805-b408-d3b8be854fd3",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/characters/model/crt_topo.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "4b182614-a953-4fdb-98bc-01d0f1e40410",
+      "Name": "crt_wormsnake",
+      "Position": "0,3264,448",
+      "Rotation": "0.0000000001847699,-0.0000000001847699,-0.7071068,0.7071068",
+      "Scale": "2,2,2",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "628d3f7d-1046-4a6c-be66-7a551b7622e1",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/characters/model/crt_wormsnake.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "deef742d-04e6-4de6-afa7-1a4b701ec033",
+      "Name": "crt_jefeara\u00F1a",
+      "Position": "0,2816,448",
+      "Rotation": "0.0000000001847699,-0.0000000001847699,-0.7071068,0.7071068",
+      "Scale": "2,2,2",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "b59f45c8-2e74-4d79-ab0f-5cf9e4bfb9a9",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/characters/model/crt_jefeara\u00F1a.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "85749825-fc3b-4603-a5a6-b577df700a66",
+      "Name": "maskcamera",
+      "Position": "-944.0415,61.98567,486.6074",
+      "Rotation": "0.0000000001847699,-0.0000000001847699,-0.7071068,0.7071068",
+      "Scale": "2,2,2",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "38d3f55d-85ac-45fd-a644-38d75e0aeafb",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/characters/model/maskcamera.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "2483438e-0b16-410e-b1c9-4be289cf3b06",
+      "Name": "sm_cards_1",
+      "Position": "0,4672,0",
+      "Rotation": "0,-0,-0.7071068,0.7071068",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "4857e39b-8a35-437a-b34b-173a30466bac",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "materials/cards/cards_model/sm_cards_1.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "b1f04589-42a3-4b39-85b3-98627781c87a",
+      "Name": "sm_cards_3",
+      "Position": "0,4672,0",
+      "Rotation": "0,-0,-0.7071068,0.7071068",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "5202f7dc-949f-4758-b1f5-4e1f45bd0731",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "materials/cards/cards_model/sm_cards_3.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "0d0403cf-a98b-49bd-8e51-b2ebc817eff9",
+      "Name": "sm_cards_2",
+      "Position": "0,4672,0",
+      "Rotation": "0,-0,-0.7071068,0.7071068",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "5a02010a-7203-4d33-a218-0050f0b3e201",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "materials/cards/cards_model/sm_cards_2.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "79a341f3-9175-4531-9db3-304eeebe6adf",
+      "Name": "sm_cards_4",
+      "Position": "0,4672,0",
+      "Rotation": "0,-0,-0.7071068,0.7071068",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "7f60d096-2839-4c41-8508-3f5631d07baf",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "materials/cards/cards_model/sm_cards_4.vmdl"
+        }
+      ]
+    },
+    {
+      "__guid": "5283e103-6d62-46e8-b5ec-ef192226c266",
+      "Name": "sm_cards_5",
+      "Position": "0,4672,0",
+      "Rotation": "0,-0,-0.7071068,0.7071068",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "e7a614e5-71a2-405a-9efe-6e4c70aaea40",
+          "BodyGroups": 18446744073709551615,
+          "Model": "materials/cards/cards_model/sm_cards_5.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__guid": "9fa5dc2c-aa6f-47f4-a380-7adb188f0e37",
+          "IsTrigger": false,
+          "Model": "materials/cards/cards_model/sm_cards_5.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Rigidbody",
+          "__guid": "de72a9f4-d8f8-40c2-973b-12b747608f74",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "1e5e02a2-44d6-40d0-b985-d17bacf637c4",
+      "Name": "sm_cards_6",
+      "Position": "0,4672,0",
+      "Rotation": "0,-0,-0.7071068,0.7071068",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Prop",
+          "__guid": "2d7d06b4-dd2b-4316-aec9-89960177071b",
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "materials/cards/cards_model/sm_cards_6.vmdl"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "environment",
+  "Description": "",
+  "LastSaved": "2024-03-17T04:30:35.0403067-06:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
