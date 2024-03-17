@@ -152,7 +152,7 @@
         },
         {
           "__type": "PlaneCollider",
-          "__guid": "ca628e1c-2606-4b83-8c89-7ead40efa62d",
+          "__guid": "53ee8465-8d27-4168-90cc-89e50d74aa50",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "100,100",
@@ -189,7 +189,7 @@
         },
         {
           "__type": "PlaneCollider",
-          "__guid": "01f50cb7-215f-41bd-9d96-95fc5cdcf618",
+          "__guid": "4ccd2b19-4bc3-43eb-8a88-6a6d80dc981c",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "100,100",
@@ -226,7 +226,7 @@
         },
         {
           "__type": "PlaneCollider",
-          "__guid": "f6b28b9f-1ed8-4dcc-b2ab-a2a24f35db41",
+          "__guid": "0a0af7ec-a62f-43bb-8bb5-65ddb3086f44",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "100,100",
@@ -263,7 +263,7 @@
         },
         {
           "__type": "PlaneCollider",
-          "__guid": "e4d269a9-5fe5-4e5b-90b0-1bf273d25d5b",
+          "__guid": "ae48d04f-ea0c-436e-82f9-d88059edc9ac",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "100,100",
@@ -300,7 +300,7 @@
         },
         {
           "__type": "PlaneCollider",
-          "__guid": "65c780cc-adb7-42e6-a561-1b2ac86eab1e",
+          "__guid": "218c3c05-90b6-4bcc-ac82-50413cc042af",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "100,100",
@@ -332,7 +332,7 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-17T05:29:15.7117241-06:00",
+  "LastSaved": "2024-03-17T06:07:30.4182905-06:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
