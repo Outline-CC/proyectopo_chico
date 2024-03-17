@@ -14,19 +14,6 @@ public sealed class BattleManager : Component
 	[Property]
 	GameObject card { get; set; }
 
-	public BattleManager()
-	{
-		enemy.Player = player;
-	}
-
-	protected override void OnStart()
-	{
-		cardToPlay = player.MyDeck.Cards[0];
-		Log.Info( "Hello world!" );
-		Log.Info( "Deck size: " + player.MyDeck.Cards.Count);
-		Log.Info( "Player: E=" + player.Energy);
-		Log.Info( "Enemy: E=" + enemy.Energy);
-	}
 	protected override void OnUpdate()
 	{
 		if ( battleContinues )

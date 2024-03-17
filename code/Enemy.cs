@@ -11,6 +11,7 @@ public enum EnemyActionType
 public sealed class Enemy : Component
 {
 	public EnemyActionType enemyAction {  get;  set; } = EnemyActionType.NormalAttack;
+	public string Name { get; set;}
 	public int LifePoints {get; set;}
 	public int Strength {get; set;}
 	public int Defense {get; set;}
