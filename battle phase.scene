@@ -1,0 +1,172 @@
+{
+  "__guid": "873bd037-7f1d-4f00-b884-8fcba4f254f5",
+  "GameObjects": [
+    {
+      "__guid": "cb9dfb19-02e0-4f2b-88c4-ca57eefe50e5",
+      "Name": "Main Camera",
+      "Position": "-800,0,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__guid": "9692d04f-0f3c-4811-9717-12b23fc6d17a",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": true,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "MouseCast",
+          "__guid": "b95635dd-20fb-4b2b-9946-2c916b431ad9"
+        }
+      ]
+    },
+    {
+      "__guid": "3d934eec-9811-4b80-9bab-5608bcd12d00",
+      "Name": "UI",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__guid": "04e18f83-3324-477e-ae53-e38a8177d3fe",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "PlayerUI",
+          "__guid": "ab4b8b8b-d371-4b01-aa52-97817823fdac"
+        }
+      ]
+    },
+    {
+      "__guid": "57210aeb-ccf2-494d-a2ac-beda10e81da1",
+      "Name": "Directional Light",
+      "Position": "0,0,200",
+      "Rotation": "-0.2459842,0.5938582,0.2931525,0.7077327",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__guid": "06fc2bad-67c6-416b-b200-b8e6faa87eff",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "__guid": "864d77ee-83e2-4e4d-8826-dd7ac07fda5e",
+      "Name": "Battle Manager",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "BattleManager",
+          "__guid": "789f0197-30e0-4426-a10f-b0404afcd53e",
+          "card": {
+            "_type": "gameobject",
+            "go": "98d52e1b-b512-4649-9c3b-67c51b7c738e"
+          },
+          "enemy": {
+            "_type": "gameobject",
+            "go": "4b2c29a7-2c31-4524-9ea8-7ed8ccf4c787"
+          },
+          "player": {
+            "_type": "gameobject",
+            "go": "4e35fd91-e084-4a7a-9ddd-dead1e4cd11b"
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "4e35fd91-e084-4a7a-9ddd-dead1e4cd11b",
+      "Name": "PLAYER",
+      "Position": "-374.9976,-96.96267,83.72582",
+      "Tags": "player",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Player",
+          "__guid": "e6a8c678-c26d-4b2a-876c-1a59992faa3b"
+        }
+      ]
+    },
+    {
+      "__guid": "4b2c29a7-2c31-4524-9ea8-7ed8ccf4c787",
+      "Name": "ENEMY",
+      "Position": "-374.9976,-96.96267,83.72582",
+      "Tags": "enemy",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Enemy",
+          "__guid": "7ebc6164-b7e1-4349-9e57-46157628d389"
+        }
+      ]
+    },
+    {
+      "__guid": "98d52e1b-b512-4649-9c3b-67c51b7c738e",
+      "Name": "CARD",
+      "Position": "-374.9976,-96.96267,83.72582",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Card",
+          "__guid": "0067f997-0c17-4e20-b98f-a9266d910952",
+          "Description": "Lorem Ipsum",
+          "EffectImpact": 6,
+          "EnergyCost": 1,
+          "Name": "Strike",
+          "Type": "Attack"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "battle phase",
+  "Description": "",
+  "LastSaved": "2024-03-17T03:24:25.3074439-06:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
