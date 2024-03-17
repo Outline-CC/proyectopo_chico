@@ -4,6 +4,7 @@ using Sandbox.UI.GameMenu;
 
 public sealed class BattleManager : Component
 {
+	/*
 	bool battleContinues = true;
 	Player player = new Player(100, 10, new Deck());
     Enemy enemy = new Enemy(); // Assuming you've created an Enemy class
@@ -11,19 +12,11 @@ public sealed class BattleManager : Component
 
 	protected override void OnStart()
 	{
-		cardToPlay = player.MyDeck.Cards[0];
+		cardToPlay = player.Deck.Cards[0];
 		Log.Info( "Hello world!" );
-		Log.Info( "Deck size: " + player.MyDeck.Cards.Count);
+		Log.Info( "Deck size: " + player.Deck.Cards.Count);
 		Log.Info( "Player: E=" + player.Energy);
 		Log.Info( "Enemy: E=" + enemy.Energy);
-	}
-	protected override void OnUpdate()
-	{
-		/*if (Input.Pressed("attack1"))
-		{
-			Log.Info("CLIC");
-			UseCard();
-		}*/
 	}
 
 	public void UseCard()
@@ -31,4 +24,5 @@ public sealed class BattleManager : Component
 		Log.Info( "Card to play: " + cardToPlay.Name );
 		player.PlayCard(cardToPlay, enemy);
 	}
+	*/
 }

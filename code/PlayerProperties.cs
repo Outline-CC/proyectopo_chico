@@ -1,15 +1,15 @@
 using System.Text.Json;
 using Sandbox;
-class PlayerProperties
+public class PlayerProperties : Component
 {
-    public void SaveDeckToFile(Deck deck)
+    public static void SaveDeckToFile(Deck deck)
     {
-        var options = new JsonSerializerOptions { WriteIndented = true };
-        string jsonString = JsonSerializer.Serialize(deck, options);
-        FileSystem.Data.WriteAllText("deckfile.json", jsonString);
+        //var options = new JsonSerializerOptions { WriteIndented = true };
+		//string jsonString = JsonSerializer.Serialize( new Card( "Strike", 1, "Attack", 6, "Deals 6 damage to an enemy." ), options);
+        //Log.Info(jsonString);
+        //FileSystem.Data.WriteAllText("deckfile.json", jsonString);
     }
 
-    // todo: replace void for Deck type
     public Deck LoadDeckFromFile()
     {
         string jsonString = FileSystem.Data.ReadAllText("deckfile.json");
@@ -18,29 +18,15 @@ class PlayerProperties
     }
 
     public Deck StartingDeck(){
-        Deck initialDeck = new Deck();
+        Deck initialDeck = new();
+        initialDeck.AddCard(new Card("Strike", 1, "Attack", 6, "Deals 6 damage to an enemy."));
+        initialDeck.AddCard(new Card("The Shield", 1, "Skill", 5, "Protects user from 5 damage."));
+        initialDeck.AddCard(new Card("Strike", 1, "Attack", 6, "Deals 6 damage to an enemy."));
+        initialDeck.AddCard(new Card("The Shield", 1, "Skill", 5, "Protects user from 5 damage."));
+        initialDeck.AddCard(new Card("Strike", 1, "Attack", 6, "Deals 6 damage to an enemy."));
+        initialDeck.AddCard(new Card("Force Field", 2, "Skill", 0, "Adds 10 defense, and gets vulnerability next turn."));
+		//SaveDeckToFile( initialDeck);
+        Log.Info("Deck made");
         return initialDeck;
     }
 }
-
-/*
-string deckFilePath = "path/to/your/deckfile.json";
-
-if (!File.Exists(deckFilePath))
-{
-    Deck initialDeck = new Deck();
-    // Add initial cards to the deck
-    initialDeck.AddCard(new Card("Sword Slash", 1, "Attack", "Deal 10 damage."));
-    initialDeck.AddCard(new Card("Shield Up", 1, "Defense", "Gain 10 block."));
-    // Add more cards as needed
-    SaveDeckToFile(initialDeck, deckFilePath);
-}
-______________
-
-Deck deck = LoadDeckFromFile(deckFilePath);
-// Example: Add a new card
-    deck.AddCard(new Card("Fireball", 2, "Attack", "Deal 15 damage to all enemies."));
-// Save changes
-SaveDeckToFile(deck, deckFilePath);
-
-*/

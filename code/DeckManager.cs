@@ -7,8 +7,16 @@ public class DeckManager : Component
     GameObject CardPrefab { get; set; }
     public List<GameObject> Cards { get; set; } = new List<GameObject>();
     public int[] positions = {950, 650, 350, 50, -250, -550};
+    public PlayerProperties pp = new();
+    public Deck deck = new();
+	protected override void OnStart()
+	{
+		Log.Info(deck.Cards.Count);
+        deck = pp.StartingDeck();
+        Log.Info(deck.Cards.Count);
+	}
 	// Assign a gameobject to the predetermined deck
-    /*
+	/*
 	protected override void OnUpdate()
     {
         if (Input.Pressed("Attack2"))

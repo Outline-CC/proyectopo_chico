@@ -16,7 +16,7 @@
     {
         "Name": "Hide",
         "EnergyCost": 3,
-        "Type": "Dodge",
+        "Type": "Skill",
         "EffectImpact": 0,
         "Description": "Protects user from damage 1 turn."
     },
@@ -28,10 +28,17 @@
         "Description": "Adds 10 defense, and gets vulnerability next turn."
     },
     {
-        "Name": "Lick",
-        "EnergyCost": 2,
-        "Type": "Skill",
-        "EffectImpact": 0,
-        "Description": "Makes the enemy vulnerable the next turn."
+      "Name": "Lick",
+      "EnergyCost": 2,
+      "Type": "Skill",
+      "EffectImpact": 0,
+      "Description": "Makes the enemy vulnerable the next turn."
+    },
+    {
+      "Name": "Blind",
+      "EnergyCost": 2,
+      "Type": "Skill",
+      "EffectImpact": 0,
+      "Description": "Lowers the enemy's accuracy"
     }
 ]
