@@ -1,0 +1,29 @@
+PauseMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(black, 0.8);
+	pointer-events: all;
+	color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 64px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	> h2 {
+		font-size: 128px;
+		font-weight: bolder;
+	}
+
+	> .options {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&.hide {
+		opacity: 0;
+	}
+}

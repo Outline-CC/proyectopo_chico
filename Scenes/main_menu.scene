@@ -1,8 +1,8 @@
 {
-  "Id": "63ebbec6-9306-4433-ad64-c486b3512eb1",
+  "__guid": "63ebbec6-9306-4433-ad64-c486b3512eb1",
   "GameObjects": [
     {
-      "Id": "00b1ee0e-4af4-4ab6-8cc8-93f0505d0b8a",
+      "__guid": "00b1ee0e-4af4-4ab6-8cc8-93f0505d0b8a",
       "Name": "mainCamera",
       "Position": "149.995,149.995,-212.125",
       "Tags": "maincamera",
@@ -11,6 +11,7 @@
       "Components": [
         {
           "__type": "CameraComponent",
+          "__guid": "36fa6846-dd0e-4e3f-b4c7-2b3c8131703a",
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
@@ -24,6 +25,27 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "e83a5bc1-b9f0-478d-8a33-696ced993172",
+      "Name": "Screen",
+      "Position": "449.995,149.995,-212.125",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__guid": "4c6c0cba-aea7-4b71-bd48-9169ebe2deb5",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "MainMenu",
+          "__guid": "107664f5-eb9c-4ffc-82da-bab2fb02977c"
         }
       ]
     }
@@ -51,6 +73,8 @@
   },
   "Title": "main_menu",
   "Description": "",
-  "LastSaved": "2024-03-12T01:25:49.5968247-06:00",
+  "LastSaved": "2024-03-17T00:53:06.3365264-06:00",
+  "ResourceVersion": 1,
+  "__version": 1,
   "__references": []
 }

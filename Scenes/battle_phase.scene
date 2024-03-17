@@ -1,5 +1,5 @@
 {
-  "Id": "c84c0eed-8915-4e56-be04-59ac85660ced",
+  "__guid": "c84c0eed-8915-4e56-be04-59ac85660ced",
   "GameObjects": [
     {
       "__guid": "cb9dfb19-02e0-4f2b-88c4-ca57eefe50e5",
@@ -83,8 +83,37 @@
           "CardPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/card_prefab.prefab"
-          },
-          "Cards": []
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "658f40da-5794-4e88-b62c-f26a231a2d79",
+      "Name": "UI",
+      "Position": "-500,0,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Children": [
+        {
+          "__guid": "c50c430b-cd46-49e3-b94c-620a6d7a6952",
+          "Name": "Screen",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ScreenPanel",
+              "__guid": "bea42211-7014-4d2c-a431-8a9a38f6ea24",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__type": "PauseMenu",
+              "__guid": "0b7476a3-a5dd-4126-b7a4-d99434b4e726"
+            }
+          ]
         }
       ]
     }
@@ -112,6 +141,8 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-13T21:25:41.1069298-06:00",
+  "LastSaved": "2024-03-17T03:39:15.450064-06:00",
+  "ResourceVersion": 1,
+  "__version": 1,
   "__references": []
 }

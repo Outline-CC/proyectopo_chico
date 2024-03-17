@@ -1,0 +1,33 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="title">
+		Proyectopo Chico
+	</div>
+	<div class="options">
+		<button class="btn" onclick=@StartGame>
+			Start Game
+		</button>
+		<button class="btn" onclick=@Quit>
+			Quit
+		</button>
+	</div>
+</root>
+
+@code
+{
+	void StartGame()
+	{
+		//Need to link to the initial scene from the game
+		GameManager.ActiveScene.LoadFromFile("Scenes/battle_phase.scene");
+	}
+
+	void Quit()
+	{
+		Game.Close();
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine( "" );
+}
