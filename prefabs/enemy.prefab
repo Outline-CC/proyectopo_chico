@@ -1,0 +1,32 @@
+{
+  "RootObject": {
+    "__guid": "a7e1b6b9-3632-4a83-a684-0996413715a5",
+    "Name": "enemy",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "SkinnedModelRenderer",
+        "__guid": "614fea88-6c26-4c06-9312-116ced872c6b",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/uni.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Enemy",
+        "__guid": "d4eeae77-1b92-4bee-bc0c-4503b353bcca"
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": [
+    "pein.uni"
+  ]
+}
