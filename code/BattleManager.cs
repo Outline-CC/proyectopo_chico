@@ -25,17 +25,13 @@ public sealed class BattleManager : Component
 				{
 					// DRAW PHASE
 					case 0: DrawPhase(); break;
-					// PLAYER BATTLE PHASE
-					case 1: break;
-					// END PLAYER TURN
-					case 2: EndTurn(); break;
-					// ENEMY ACTION
 					case 3: break;
 					default: break;
 				}
 			//}
 			if (Input.Pressed("attack1"))
 			{
+				//Log.Info( "ACT" );
 				var mouseray = Scene.Camera.ScreenPixelToRay(Mouse.Position);
 				SceneTraceResult ray = Scene.Trace.Ray(mouseray.Position, mouseray.Forward * int.MaxValue).Run();
 				if (ray.Hit)
@@ -44,6 +40,11 @@ public sealed class BattleManager : Component
 					Log.Info(ray.GameObject.Components.Get<Card>( FindMode.EverythingInSelf ).Name);
 					PlayerBattle(ray.GameObject);
 				}
+			}
+			if (Input.Pressed("use"))
+			{
+				EndTurn();
+				step = 0;
 			}
 		}
 	}
