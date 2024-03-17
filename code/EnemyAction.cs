@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 
 namespace Sandbox
 {
-	internal class EnemyAction
+	public class EnemyAction
 	{
 		private string _name;
 		private int _energyCost;
@@ -75,6 +76,18 @@ namespace Sandbox
 			_myDefense = myDefense;
 			_myAttack = myAttack;
 			_description = Description;
+		}
+
+		public EnemyAction()
+		{
+			_name = "";
+			_energyCost = 0;
+			_damage = 0;
+			_opponentDefense = 0;
+			_opponentAttack = 0;
+			_myDefense = 0;
+			_myAttack = 0;
+			_description = "";
 		}
 
 		public void ResolveAction(Player player, Enemy enemy)

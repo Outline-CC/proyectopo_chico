@@ -63,7 +63,7 @@ public class Player : Component
 			if (Energy >= playCard.EnergyCost)
 			{
 				// Implement the logic of using the card based on its type, effects, etc.
-				Log.Info( $"Playing {card.Name} on {playEnemy.Name}" );
+				//Log.Info( $"Playing {card.Name} on {playEnemy.Name}" );
 				Energy -= playCard.EnergyCost;
 				// For simplicity, just remove the card from hand and add to discard pile
 				Hand.Remove( playCard );

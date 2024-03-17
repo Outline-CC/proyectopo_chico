@@ -14,19 +14,6 @@ public sealed class BattleManager : Component
 	[Property]
 	GameObject card { get; set; }
 
-	public BattleManager()
-	{
-		enemy.Player = player;
-	}
-
-	protected override void OnStart()
-	{
-		cardToPlay = player.MyDeck.Cards[0];
-		Log.Info( "Hello world!" );
-		Log.Info( "Deck size: " + player.MyDeck.Cards.Count);
-		Log.Info( "Player: E=" + player.Energy);
-		Log.Info( "Enemy: E=" + enemy.Energy);
-	}
 	protected override void OnUpdate()
 	{
 		if ( battleContinues )
@@ -43,7 +30,7 @@ public sealed class BattleManager : Component
 					// END PLAYER TURN
 					case 2: EndTurn(); break;
 					// ENEMY ACTION
-					case 3: break;
+					case 3: EnemyTurn();  break;
 					default: break;
 				}
 			}
@@ -64,9 +51,23 @@ public sealed class BattleManager : Component
 		player.Components.Get<Player>().EndTurn();
 		step = 3;
 	}
-	void EnemyAction()
+	void EnemyTurn()
 	{
-		// enemy.Components.Get<Enemy>().EnemyAction(player);
-
+		Enemy enemyObject = enemy.Components.Get<Enemy>();
+		Player playerObject = player.Components.Get<Player>();
+		while ( enemyObject.Energy > 0 )
+		{
+			if( enemyObject.EnemyActionType > EnemyActionType.NormalAttack && enemyObject.Energy == 1 )
+			{
+				enemyObject.EnemyActionType = EnemyActionType.NormalAttack;
+			}
+			enemyObject.Action();
+			playerObject.LifePoints -= enemyObject.EnemyAction.Damage;
+			playerObject.Strength -= enemyObject.EnemyAction.OpponentAttack;
+			playerObject.Defense -= enemyObject.EnemyAction.OpponentDefense;
+			enemyObject.Energy -= enemyObject.EnemyAction.EnergyCost;
+			enemyObject.Strength += enemyObject.EnemyAction.MyAttack;
+			enemyObject.Defense += enemyObject.EnemyAction.MyDefense;
+		}
 	}
 }
