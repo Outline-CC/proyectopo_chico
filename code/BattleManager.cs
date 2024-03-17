@@ -5,9 +5,14 @@ using Sandbox.UI.GameMenu;
 public sealed class BattleManager : Component
 {
 	bool battleContinues = true;
-	Player player = new Player(100, 10, new Deck());
-    Enemy enemy = new Enemy(); // Assuming you've created an Enemy class
-    Card cardToPlay; // Simplified: playing the first card
+	// 0 = DRAW PHASE, 1 = PLAYER ACTION, 2 = END PLAYER TURN, 3 = ENEMY ACTS
+	int step = 0;
+	[Property]
+	GameObject player { get; set; }
+	[Property]
+	GameObject enemy { get; set; }
+	[Property]
+	GameObject card { get; set; }
 
 	public BattleManager()
 	{
@@ -24,16 +29,44 @@ public sealed class BattleManager : Component
 	}
 	protected override void OnUpdate()
 	{
-		/*if (Input.Pressed("attack1"))
+		if ( battleContinues )
 		{
-			Log.Info("CLIC");
-			UseCard();
-		}*/
+			if( Input.Pressed( "attack2" ) )
+			{
+				Log.Info( "ACT" );
+				switch ( step )
+				{
+					// DRAW PHASE
+					case 0: DrawPhase(); break;
+					// PLAYER BATTLE PHASE
+					case 1: PlayerBattle(); break;
+					// END PLAYER TURN
+					case 2: EndTurn(); break;
+					// ENEMY ACTION
+					case 3: break;
+					default: break;
+				}
+			}
+		}
 	}
 
-	public void UseCard()
+	void DrawPhase()
 	{
-		Log.Info( "Card to play: " + cardToPlay.Name );
-		player.PlayCard(cardToPlay, enemy);
+		player.Components.Get<Player>().StartTurn();
+		step = 1;
+	}
+	void PlayerBattle()
+	{
+		player.Components.Get<Player>().PlayCard(card, enemy);
+	}
+	void EndTurn()
+	{
+		player.Components.Get<Player>().EndTurn();
+		step = 3;
+	}
+	void EnemyAction()
+	{
+		// enemy.Components.Get<Enemy>().EnemyAction(player);
+
 	}
 }

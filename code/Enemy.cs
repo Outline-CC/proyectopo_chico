@@ -20,6 +20,7 @@ public sealed class Enemy : Component
 
 	public Enemy()
 	{
+		Name = "Juan";
 		LifePoints = 20;
 		Energy = 3;
 		Strength = 0; 
@@ -32,7 +33,6 @@ public sealed class Enemy : Component
 	{
 
 	}
-
 	protected override void OnStart()
 	{
 	
