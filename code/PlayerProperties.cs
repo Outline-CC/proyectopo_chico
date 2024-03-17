@@ -1,23 +1,25 @@
 using System.Text.Json;
-using System.IO;
 using Sandbox;
 class PlayerProperties
 {
-    public void SaveDeckToFile(Deck deck, string filePath)
+    public void SaveDeckToFile(Deck deck)
     {
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(deck, options);
-        // NO JALA FILE
-        //Filesystem tambien tiene metodo writejson
         FileSystem.Data.WriteAllText("deckfile.json", jsonString);
     }
 
     // todo: replace void for Deck type
-    public void LoadDeckFromFile(string filePath)
+    public Deck LoadDeckFromFile()
     {
         string jsonString = FileSystem.Data.ReadAllText("deckfile.json");
         Deck deck = JsonSerializer.Deserialize<Deck>(jsonString);
-        //return deck;
+        return deck;
+    }
+
+    public Deck StartingDeck(){
+        Deck initialDeck = new Deck();
+        return initialDeck;
     }
 }
 
@@ -37,7 +39,7 @@ ______________
 
 Deck deck = LoadDeckFromFile(deckFilePath);
 // Example: Add a new card
-deck.AddCard(new Card("Fireball", 2, "Attack", "Deal 15 damage to all enemies."));
+    deck.AddCard(new Card("Fireball", 2, "Attack", "Deal 15 damage to all enemies."));
 // Save changes
 SaveDeckToFile(deck, deckFilePath);
 

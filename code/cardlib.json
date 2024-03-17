@@ -1,30 +1,37 @@
 [
     {
-        "Name": "Slash",
+        "Name": "Strike",
         "EnergyCost": 1,
         "Type": "Attack",
-        "EffectImpact": 4,
-        "Description": "Deals 4 damage to an enemy."
+        "EffectImpact": 6,
+        "Description": "Deals 6 damage to an enemy."
     },
     {
-        "Name": "Shield",
+        "Name": "The Shield",
         "EnergyCost": 1,
         "Type": "Skill",
-        "EffectImpact": 4,
-        "Description": "Protects user from 4 damage."
+        "EffectImpact": 5,
+        "Description": "Protects user from 5 damage."
     },
     {
-        "Name": "Double Slash",
-        "EnergyCost": 2,
-        "Type": "Attack",
-        "EffectImpact": 10,
-        "Description": "Deals 10 damage to an enemy."
+        "Name": "Hide",
+        "EnergyCost": 3,
+        "Type": "Dodge",
+        "EffectImpact": 0,
+        "Description": "Protects user from damage 1 turn."
     },
     {
-        "Name": "Burrow",
+        "Name": "Force Field",
         "EnergyCost": 2,
-        "Type": "Defense",
-        "EffectImpact": 10,
-        "Description": "Protects user from 10 damage."
+        "Type": "Skill",
+        "EffectImpact": 0,
+        "Description": "Adds 10 defense, and gets vulnerability next turn."
+    },
+    {
+        "Name": "Lick",
+        "EnergyCost": 2,
+        "Type": "Skill",
+        "EffectImpact": 0,
+        "Description": "Makes the enemy vulnerable the next turn."
     }
 ]
