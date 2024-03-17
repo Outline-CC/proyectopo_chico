@@ -16,6 +16,7 @@ public sealed class Enemy : Component
 	public int Defense {get; set;}
 	public int Energy {get; set;}
 	public float Accuracy { get; set;}
+	public Player Player { get; set;}
 
 	public Enemy()
 	{
@@ -24,11 +25,17 @@ public sealed class Enemy : Component
 		Strength = 0; 
 		Defense = 0;
 		Accuracy = 0;
+		Player = new Player();
 	}
 
 	protected override void OnUpdate()
 	{
 
+	}
+
+	protected override void OnStart()
+	{
+	
 	}
 
 	public void Action() 
@@ -37,6 +44,8 @@ public sealed class Enemy : Component
 		{
 			case EnemyActionType.NormalAttack:
 				//Logica de Ataque Normal
+				EnemyAction enemyAction = new EnemyAction( "NormalAttack", 1, 0, 0, 0, 0, 0, "Normal Attack" );
+				enemyAction.ResolveAction( Player, this );
 				break;
 			case EnemyActionType.Buff:
 				//Logica de Buff

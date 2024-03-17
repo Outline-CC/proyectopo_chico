@@ -9,6 +9,11 @@ public sealed class BattleManager : Component
     Enemy enemy = new Enemy(); // Assuming you've created an Enemy class
     Card cardToPlay; // Simplified: playing the first card
 
+	public BattleManager()
+	{
+		enemy.Player = player;
+	}
+
 	protected override void OnStart()
 	{
 		cardToPlay = player.MyDeck.Cards[0];

@@ -15,6 +15,11 @@ public sealed class Player : Component
 		MyDeck = deck;
 	}
 
+	public Player()
+	{
+
+	}
+
 	public void PlayCard(Card card, Enemy enemy)
 	{
 		Log.Info("Card: " + card.Name + "/" + card.EnergyCost + "/" + card.Description);

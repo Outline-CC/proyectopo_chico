@@ -77,7 +77,7 @@ namespace Sandbox
 			_description = Description;
 		}
 
-		public void ResolveAction(ref Player player, ref Enemy enemy)
+		public void ResolveAction(Player player, Enemy enemy)
 		{
 			if ( player != null)
 			{
