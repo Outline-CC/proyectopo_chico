@@ -13,7 +13,7 @@
 						_class = "DefaultMaterialGroup"
 						remaps = [  ]
 						use_global_default = true
-						global_default_material = "models/characters/topobien3_c.vmat"
+						global_default_material = "materials/cards/uvcards_texture.vmat"
 					},
 				]
 			},
@@ -23,7 +23,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/characters/crt_topo.fbx"
+						filename = "materials/cards/cards_model/sm_cards_1.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0

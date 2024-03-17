@@ -4,6 +4,9 @@ Layer0
 {
 	shader "shaders/complex.shader"
 
+	//---- Color ----
+	F_TINT_MASK 1
+
 	//---- Translucent ----
 	F_ALPHA_TEST 1
 
@@ -15,7 +18,8 @@ Layer0
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "models/characters/topobien3_c.png"
+	TextureColor "materials/frontmask_camera/alpha_mask.png"
+	TextureTintMask "materials/default/default_mask.tga"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -30,7 +34,7 @@ Layer0
 	TextureNormal "materials/default/default_normal.tga"
 
 	//---- Roughness ----
-	g_flRoughnessScaleFactor "2.000"
+	g_flRoughnessScaleFactor "1.000"
 	TextureRoughness "materials/default/default_rough.tga"
 
 	//---- Texture Coordinates ----
@@ -41,7 +45,7 @@ Layer0
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
 
 	//---- Translucent ----
-	g_flAlphaTestReference "0.500"
-	g_flAntiAliasedEdgeStrength "0.689"
-	TextureTranslucency "models/characters/topobien3_msk.png"
+	g_flAlphaTestReference "0.990"
+	g_flAntiAliasedEdgeStrength "0.402"
+	TextureTranslucency "materials/frontmask_camera/alpha_mask_opacity.png"
 }

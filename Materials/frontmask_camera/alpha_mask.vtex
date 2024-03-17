@@ -1,0 +1,13 @@
+{
+  "Sequences": [
+    {
+      "Source": "materials/frontmask_camera/alpha_mask.png",
+      "IsLooping": true,
+      "Frames": 64
+    }
+  ],
+  "InputColorSpace": "SRGB",
+  "OutputFormat": "DXT1",
+  "OutputColorSpace": "SRGB",
+  "OutputTypeString": "2D"
+}
