@@ -2,7 +2,7 @@ using Sandbox;
 
 public sealed class Enemy : Component
 {
-
+	public string Name { get; set; }
 	public int LifePoints {get; set;}
 	public int Strength {get; set;}
 	public int Defense {get; set;}
@@ -11,6 +11,7 @@ public sealed class Enemy : Component
 
 	public Enemy()
 	{
+		Name = "Juan";
 		LifePoints = 20;
 		Energy = 3;
 		MyDeck = new Deck();

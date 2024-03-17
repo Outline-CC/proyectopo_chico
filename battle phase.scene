@@ -78,12 +78,66 @@
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "DeckManager",
-          "__guid": "aba0640b-b95f-4189-add3-337c11544df0",
-          "CardPrefab": {
+          "__type": "BattleManager",
+          "__guid": "789f0197-30e0-4426-a10f-b0404afcd53e",
+          "card": {
             "_type": "gameobject",
-            "prefab": "code/card prefab.prefab"
+            "go": "98d52e1b-b512-4649-9c3b-67c51b7c738e"
+          },
+          "enemy": {
+            "_type": "gameobject",
+            "go": "4b2c29a7-2c31-4524-9ea8-7ed8ccf4c787"
+          },
+          "player": {
+            "_type": "gameobject",
+            "go": "4e35fd91-e084-4a7a-9ddd-dead1e4cd11b"
           }
+        }
+      ]
+    },
+    {
+      "__guid": "4e35fd91-e084-4a7a-9ddd-dead1e4cd11b",
+      "Name": "PLAYER",
+      "Position": "-374.9976,-96.96267,83.72582",
+      "Tags": "player",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Player",
+          "__guid": "e6a8c678-c26d-4b2a-876c-1a59992faa3b"
+        }
+      ]
+    },
+    {
+      "__guid": "4b2c29a7-2c31-4524-9ea8-7ed8ccf4c787",
+      "Name": "ENEMY",
+      "Position": "-374.9976,-96.96267,83.72582",
+      "Tags": "enemy",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Enemy",
+          "__guid": "7ebc6164-b7e1-4349-9e57-46157628d389"
+        }
+      ]
+    },
+    {
+      "__guid": "98d52e1b-b512-4649-9c3b-67c51b7c738e",
+      "Name": "CARD",
+      "Position": "-374.9976,-96.96267,83.72582",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Card",
+          "__guid": "0067f997-0c17-4e20-b98f-a9266d910952",
+          "Description": "Lorem Ipsum",
+          "EffectImpact": 6,
+          "EnergyCost": 1,
+          "Name": "Strike",
+          "Type": "Attack"
         }
       ]
     }
@@ -111,7 +165,7 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-16T23:53:48.7202326-06:00",
+  "LastSaved": "2024-03-17T03:24:25.3074439-06:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

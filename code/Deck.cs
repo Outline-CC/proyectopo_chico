@@ -42,12 +42,18 @@ public class Deck
 	public Deck StartingDeck()
 	{
 		Deck initialDeck = new();
-		initialDeck.AddCard( new Card( "Strike", 1, "Attack", 6, "Deals 6 damage to an enemy." ) );
-		initialDeck.AddCard( new Card( "The Shield", 1, "Skill", 5, "Protects user from 5 damage." ) );
-		initialDeck.AddCard( new Card( "Strike", 1, "Attack", 6, "Deals 6 damage to an enemy." ) );
-		initialDeck.AddCard( new Card( "The Shield", 1, "Skill", 5, "Protects user from 5 damage." ) );
-		initialDeck.AddCard( new Card( "Strike", 1, "Attack", 6, "Deals 6 damage to an enemy." ) );
-		initialDeck.AddCard( new Card( "Force Field", 2, "Skill", 0, "Adds 10 defense, and gets vulnerability next turn." ) );
+		initialDeck.AddCard( new Card() );
+		initialDeck.AddCard( new Card() );
+		initialDeck.AddCard( new Card() );
+		initialDeck.AddCard( new Card() );
+		initialDeck.AddCard( new Card() );
+		initialDeck.AddCard( new Card() );
+		initialDeck.Cards[0].SetData( "Strike", 1, "Attack", 6, "Deals 6 damage to an enemy." );
+		initialDeck.Cards[1].SetData( "The Shield", 1, "Skill", 5, "Protects user from 5 damage." );
+		initialDeck.Cards[2].SetData( "Strike", 1, "Attack", 6, "Deals 6 damage to an enemy." );
+		initialDeck.Cards[3].SetData( "The Shield", 1, "Skill", 5, "Protects user from 5 damage." );
+		initialDeck.Cards[4].SetData( "Strike", 1, "Attack", 6, "Deals 6 damage to an enemy." );
+		initialDeck.Cards[5].SetData( "Force Field", 2, "Skill", 0, "Adds 10 defense, and gets vulnerability next turn." );
 		Log.Info( "Deck made" );
 		return initialDeck;
 	}

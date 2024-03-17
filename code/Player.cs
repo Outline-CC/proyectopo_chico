@@ -13,10 +13,10 @@ public class Player : Component
     //public Deck DrawPile { get; set; }
     public Deck DiscardPile { get; set; }
 
-	public Player(int lifepoints, int energy)
+	public Player()
 	{
-		LifePoints = lifepoints;
-		Energy = energy;
+		LifePoints = 100;
+		Energy = 3;
 		Deck = new Deck().StartingDeck();
 		Strength = 0;
 		Defense = 0;
@@ -25,17 +25,17 @@ public class Player : Component
 
 		Deck.Shuffle();
 	}
-	protected override void OnUpdate()
-	{
-
-	}
 
 	public void StartTurn() {
+		Log.Info("Start turn");
+		Energy += 3;
+		Deck.Shuffle();
 		DrawCards( 4 );
 	}
 
 	private void DrawCards( int numberOfCards )
 	{
+		Log.Info( "DRAW CARDS" );
 		if ( Deck.Cards.Count < numberOfCards )
 		{
 			// Shuffle discard into draw pile if not enough cards
@@ -43,23 +43,30 @@ public class Player : Component
 			DiscardPile.Cards.Clear();
 			Deck.Shuffle();
 		}
-		var drawnCards = Deck.Draw( numberOfCards );
+		List<Card> drawnCards = Deck.Draw( numberOfCards );
+		foreach ( var card in drawnCards )
+		{
+			Log.Info( card.Name);
+		}
 		Hand.AddRange( drawnCards );
 	}
 
-	public void PlayCard( Card card, GameObject target )
+	public void PlayCard( GameObject card, GameObject target )
 	{
+		Log.Info( "PLAY CARDS" );
+		Card playCard = card.Components.Get<Card>();
+		Enemy playEnemy = target.Components.Get<Enemy>();
 		// Assuming 'card' is a card from the hand
-		if ( Hand.Contains( card ) )
+		if ( Hand.Contains( playCard ) )
 		{
-			if (Energy >= card.EnergyCost)
+			if (Energy >= playCard.EnergyCost)
 			{
 				// Implement the logic of using the card based on its type, effects, etc.
-				Log.Info( $"Playing {card.Name} on {target.Name}" );
-				Energy -= card.EnergyCost;
+				Log.Info( $"Playing {card.Name} on {playEnemy.Name}" );
+				Energy -= playCard.EnergyCost;
 				// For simplicity, just remove the card from hand and add to discard pile
-				Hand.Remove( card );
-				DiscardPile.AddCard( card );
+				Hand.Remove( playCard );
+				DiscardPile.AddCard( playCard );
 			}
 			else
 			{
@@ -73,16 +80,17 @@ public class Player : Component
 	}
 	public void EndTurn()
 	{
+		Log.Info( "END TURN" );
 		// Move any cards left in hand to the discard pile
 		foreach ( var card in Hand.ToList() ) // ToList to avoid modification during enumeration
 		{
 			DiscardPile.AddCard( card );
 		}
 		Hand.Clear();
-		Energy += 3;
 	}
 	public void AcquireCard( Card newCard )
 	{
+		Log.Info( "ACQUIRE CARD" );
 		Deck.AddCard( newCard );
 	}
 }
