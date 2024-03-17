@@ -1,0 +1,37 @@
+{
+  "RootObject": {
+    "__guid": "969f1369-5b6f-4bcd-b257-6722de4adb50",
+    "Name": "card_prefab",
+    "Scale": "4,2,1",
+    "Tags": "usable,card",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "__guid": "baf10107-d98a-4c25-a93c-f295f3c72ebf",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/dev/plane.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "PlaneCollider",
+        "__guid": "e2856609-7106-4922-b6a8-90ac8bf19d8a",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Scale": "100,100",
+        "Static": true
+      },
+      {
+        "__type": "CardObject",
+        "__guid": "36ec86f5-5672-4455-8f6d-9ad9e13b4b40"
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

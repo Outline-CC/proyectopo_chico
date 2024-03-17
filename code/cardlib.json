@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "Slash",
+        "EnergyCost": 1,
+        "Type": "Attack",
+        "EffectImpact": 4,
+        "Description": "Deals 4 damage to an enemy."
+    },
+    {
+        "Name": "Shield",
+        "EnergyCost": 1,
+        "Type": "Skill",
+        "EffectImpact": 4,
+        "Description": "Protects user from 4 damage."
+    },
+    {
+        "Name": "Double Slash",
+        "EnergyCost": 2,
+        "Type": "Attack",
+        "EffectImpact": 10,
+        "Description": "Deals 10 damage to an enemy."
+    },
+    {
+        "Name": "Burrow",
+        "EnergyCost": 2,
+        "Type": "Defense",
+        "EffectImpact": 10,
+        "Description": "Protects user from 10 damage."
+    }
+]
