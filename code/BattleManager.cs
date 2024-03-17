@@ -14,6 +14,9 @@ public sealed class BattleManager : Component
 	[Property]
 	GameObject card { get; set; }
 
+	Enemy enemyObject;
+	Player playerObject;
+
 	protected override void OnUpdate()
 	{
 		if ( battleContinues )
@@ -35,39 +38,61 @@ public sealed class BattleManager : Component
 				}
 			}
 		}
+		else
+		{
+			if(playerObject.LifePoints > 0 && enemyObject.LifePoints < 1)
+			{
+				//Win
+			}
+			if(playerObject.LifePoints < 1 && enemyObject.LifePoints > 0)
+			{
+				//Lose
+			}
+		}
+	}
+
+	protected override void OnStart()
+	{
+		enemyObject = enemy.Components.Get<Enemy>();
+		playerObject = player.Components.Get<Player>();
 	}
 
 	void DrawPhase()
 	{
-		player.Components.Get<Player>().StartTurn();
+		playerObject.StartTurn();
 		step = 1;
 	}
 	void PlayerBattle()
 	{
-		player.Components.Get<Player>().PlayCard(card, enemy);
+		playerObject.PlayCard(card, enemy);
 	}
 	void EndTurn()
 	{
-		player.Components.Get<Player>().EndTurn();
+		playerObject.EndTurn();
 		step = 3;
 	}
 	void EnemyTurn()
 	{
-		Enemy enemyObject = enemy.Components.Get<Enemy>();
-		Player playerObject = player.Components.Get<Player>();
-		while ( enemyObject.Energy > 0 )
+		if(enemyObject.LifePoints > 0 )
 		{
-			if( enemyObject.EnemyActionType > EnemyActionType.NormalAttack && enemyObject.Energy == 1 )
+			while ( enemyObject.Energy > 0 )
 			{
-				enemyObject.EnemyActionType = EnemyActionType.NormalAttack;
+				if ( enemyObject.EnemyActionType > EnemyActionType.NormalAttack && enemyObject.Energy == 1 )
+				{
+					enemyObject.EnemyActionType = EnemyActionType.NormalAttack;
+				}
+				enemyObject.Action();
+				playerObject.LifePoints -= enemyObject.EnemyAction.Damage;
+				playerObject.Strength -= enemyObject.EnemyAction.OpponentAttack;
+				playerObject.Defense -= enemyObject.EnemyAction.OpponentDefense;
+				enemyObject.Energy -= enemyObject.EnemyAction.EnergyCost;
+				enemyObject.Strength += enemyObject.EnemyAction.MyAttack;
+				enemyObject.Defense += enemyObject.EnemyAction.MyDefense;
 			}
-			enemyObject.Action();
-			playerObject.LifePoints -= enemyObject.EnemyAction.Damage;
-			playerObject.Strength -= enemyObject.EnemyAction.OpponentAttack;
-			playerObject.Defense -= enemyObject.EnemyAction.OpponentDefense;
-			enemyObject.Energy -= enemyObject.EnemyAction.EnergyCost;
-			enemyObject.Strength += enemyObject.EnemyAction.MyAttack;
-			enemyObject.Defense += enemyObject.EnemyAction.MyDefense;
+		}
+		else
+		{
+			battleContinues = false;
 		}
 	}
 }
