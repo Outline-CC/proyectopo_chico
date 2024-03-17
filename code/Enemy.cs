@@ -10,14 +10,14 @@ public enum EnemyActionType
 
 public sealed class Enemy : Component
 {
-	public EnemyActionType enemyAction {  get;  set; } = EnemyActionType.NormalAttack;
-	public string Name { get; set;}
+	public EnemyActionType EnemyActionType {  get;  set; } = EnemyActionType.NormalAttack;
+	public string Name { get; set; }
 	public int LifePoints {get; set;}
 	public int Strength {get; set;}
 	public int Defense {get; set;}
 	public int Energy {get; set;}
 	public float Accuracy { get; set;}
-	public Player Player { get; set;}
+	public EnemyAction EnemyAction { get; set; } = new EnemyAction();
 
 	public Enemy()
 	{
@@ -27,7 +27,6 @@ public sealed class Enemy : Component
 		Strength = 0; 
 		Defense = 0;
 		Accuracy = 0;
-		Player = new Player();
 	}
 
 	protected override void OnUpdate()
@@ -41,30 +40,47 @@ public sealed class Enemy : Component
 
 	public void Action() 
 	{
-		switch (enemyAction)
-		{
-			case EnemyActionType.NormalAttack:
-				//Logica de Ataque Normal
-				EnemyAction enemyAction = new EnemyAction( "NormalAttack", 1, 0, 0, 0, 0, 0, "Normal Attack" );
-				enemyAction.ResolveAction( Player, this );
-				break;
-			case EnemyActionType.Buff:
-				//Logica de Buff
-				break;
-			case EnemyActionType.Debuff:
-				//Logica de Debuff
-				break;
-			case EnemyActionType.SpecialAttack:
-				//Logica de Ataque Especial
-				break;
-			default:
-				break;
-		}
+		
+			switch ( EnemyActionType )
+			{
+				case EnemyActionType.NormalAttack:
+					//Logica de Ataque Normal
+					EnemyAction.Name = "NormalAttack";
+					EnemyAction.EnergyCost = 1;
+					EnemyAction.Damage = 3;
+					EnemyAction.Description = "Normal Attack";
+					break;
+				case EnemyActionType.Buff:
+					//Logica de Buff
+					EnemyAction.Name = "Buff";
+					EnemyAction.EnergyCost = 2;
+					EnemyAction.MyAttack = 1;
+				    EnemyAction.MyDefense = 1;
+					EnemyAction.Description = "Buff";
+					break;
+				case EnemyActionType.Debuff:
+					//Logica de Debuff
+					EnemyAction.Name = "Debuff";
+					EnemyAction.EnergyCost = 2;
+					EnemyAction.OpponentAttack = 1;
+				    EnemyAction.OpponentDefense = 1;
+					EnemyAction.Description = "Debuff";
+					break;
+				case EnemyActionType.SpecialAttack:
+					//Logica de Ataque Especial
+					EnemyAction.Name = "NormalAttack";
+					EnemyAction.EnergyCost = 1;
+					EnemyAction.Damage = 6;
+					EnemyAction.Description = "Normal Attack";
+					break;
+				default:
+					break;
+			}
 
-		enemyAction++;
-		if(enemyAction > EnemyActionType.SpecialAttack)
-		{
-			enemyAction = EnemyActionType.NormalAttack;
-		}
+			EnemyActionType++;
+			if ( EnemyActionType > EnemyActionType.SpecialAttack )
+			{
+				EnemyActionType = EnemyActionType.NormalAttack;
+			}
 	}
 }
