@@ -43,10 +43,14 @@ public sealed class BattleManager : Component
 				var mouseray = Scene.Camera.ScreenPixelToRay(Mouse.Position);
 				SceneTraceResult ray = Scene.Trace.Ray(mouseray.Position, mouseray.Forward * int.MaxValue).Run();
 				if (ray.Hit)
+					Log.Info(ray.GameObject.Name);
 				{
 					if(ray.GameObject.Tags.ToString().Contains("card"))
-					Log.Info(ray.GameObject.Components.Get<Card>( FindMode.EverythingInSelf ).Name);
-					PlayerBattle(ray.GameObject);
+					{
+						Log.Info( "HIT" );
+						Log.Info(ray.GameObject.Components.Get<Card>( FindMode.EverythingInSelf ).Name);
+						PlayerBattle(ray.GameObject);
+					}
 				}
 			}
 			if (Input.Pressed("use"))

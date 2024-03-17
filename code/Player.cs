@@ -78,8 +78,8 @@ public class Player : Component
 				// For simplicity, just remove the card from hand and add to discard pile
 				Hand.Remove( playCard );
 				DiscardPile.AddCard( playCard );
-				card.Destroy();
-				Log.Info( $"Player energy left: {Energy}" );
+				card.Enabled=false;
+				Log.Info( $"Player energy left: {Energy} and card is now {card.Enabled}" );
 			}
 			else
 			{
