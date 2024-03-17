@@ -1,5 +1,5 @@
 {
-  "Id": "9f832399-4887-46b0-8f21-2ee284f538e2",
+  "__guid": "9f832399-4887-46b0-8f21-2ee284f538e2",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -11,7 +11,7 @@
       "Components": [
         {
           "__type": "DirectionalLight",
-          "__guid": "870da707-019c-40a4-be8f-eaca3948de39",
+          "__guid": "291a06e7-435b-4150-adfb-0c41cbfcf2b0",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.94419,0.97767,1,1",
@@ -29,13 +29,13 @@
       "Components": [
         {
           "__type": "SkyBox2D",
-          "__guid": "a3f455b1-a0c3-430e-9ce9-fe61eed6a5da",
+          "__guid": "547a78e5-ea4a-4ad5-813f-41ddcd3f4f14",
           "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "EnvmapProbe",
-          "__guid": "732b6bfa-09f3-4df6-b6c4-8200bfb797e7",
+          "__guid": "6d8cfd11-9519-4558-8447-951cf352b421",
           "Bounds": {
             "Mins": "-512,-512,-512",
             "Maxs": "512,512,512"
@@ -56,7 +56,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__guid": "f0ddeb02-305e-4157-954d-0d6655621235",
+          "__guid": "23edfec7-b8b4-41b2-b058-bce3d6d4bb19",
           "BodyGroups": 18446744073709551615,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/plane.vmdl",
@@ -65,7 +65,7 @@
         },
         {
           "__type": "BoxCollider",
-          "__guid": "8db37d9f-38b0-4ce5-87ca-bf81b51b2049",
+          "__guid": "e926eeed-2959-4e97-8763-3eef1dada85a",
           "Center": "0,0,-5",
           "IsTrigger": false,
           "Scale": "100,100,10",
@@ -84,7 +84,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__guid": "4a2a65a6-c58d-42a6-8469-c5d66f07462e",
+          "__guid": "94e12787-bc4a-48b3-808a-ebae180d7281",
           "BodyGroups": 18446744073709551615,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/box.vmdl",
@@ -93,7 +93,7 @@
         },
         {
           "__type": "BoxCollider",
-          "__guid": "adaf2921-8c76-4c84-a4a2-1c1786117144",
+          "__guid": "a9cf7633-9391-4b38-8a29-02d2fd4b0587",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
@@ -101,7 +101,7 @@
         },
         {
           "__type": "Rigidbody",
-          "__guid": "6ecb1522-37a0-4a2e-b368-bed7ff9ac2f9",
+          "__guid": "f4b5cb77-c07b-4d92-a201-9709598ea992",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -124,7 +124,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__guid": "eb15e74c-6a93-4b35-bdf1-e82120cc8f60",
+          "__guid": "d59cd2a4-fd3c-4216-aa8c-06590dc1ba5e",
           "BodyGroups": 18446744073709551615,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/box.vmdl",
@@ -133,7 +133,7 @@
         },
         {
           "__type": "BoxCollider",
-          "__guid": "6599bd6e-ec30-462f-86b1-a783a893351b",
+          "__guid": "12dbad61-cba1-4e39-a0f7-7583b8dfe8f7",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
@@ -141,7 +141,7 @@
         },
         {
           "__type": "Rigidbody",
-          "__guid": "05ce8766-44e9-4448-b1bf-1bb70fc77c21",
+          "__guid": "5a682435-b8e6-4349-8749-dfe6b2b1998e",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -164,7 +164,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__guid": "f5e53a4a-5e73-46c6-aa69-5a3a0fc5c0bc",
+          "__guid": "778d0fb2-0e67-4081-8535-3c199cd566c7",
           "BodyGroups": 18446744073709551615,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/box.vmdl",
@@ -173,7 +173,7 @@
         },
         {
           "__type": "BoxCollider",
-          "__guid": "153749be-65d1-46dd-88da-0e9ddd1ebf37",
+          "__guid": "868d118e-c799-4d60-a6d2-6543f57c9f63",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
@@ -181,7 +181,7 @@
         },
         {
           "__type": "Rigidbody",
-          "__guid": "0ed0d967-f87d-44e9-9a06-bf8040a7b2c5",
+          "__guid": "127c722e-7a78-402f-8d63-3775751e5f0f",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -203,7 +203,7 @@
       "Components": [
         {
           "__type": "CameraComponent",
-          "__guid": "c01b9e38-0aa3-40e9-85de-820343ce9b48",
+          "__guid": "bd83f28c-2c37-4df9-bde0-9b0643285a87",
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
@@ -220,7 +220,7 @@
         },
         {
           "__type": "Bloom",
-          "__guid": "15aa9bcf-2250-46fd-a282-c8396c2f1340",
+          "__guid": "48170762-6c83-42fe-9759-ef1ceec9eafd",
           "BloomColor": {
             "color": [
               {
@@ -249,7 +249,7 @@
         },
         {
           "__type": "Tonemapping",
-          "__guid": "c86b087f-05ba-471b-a385-1d2e179fe00c",
+          "__guid": "abe40b86-3f88-4588-9c41-8f14f9e8c67d",
           "ExposureCompensation": 0,
           "MaximumExposure": 2,
           "MinimumExposure": 1,
@@ -257,7 +257,7 @@
         },
         {
           "__type": "Sharpen",
-          "__guid": "cb783e2a-7a45-43ea-a0ad-514a4bd704a9",
+          "__guid": "a2a3d486-fa4c-4fa1-964d-c60e9fc926b0",
           "Scale": 0.2
         }
       ]
@@ -286,6 +286,8 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-13T21:33:44.1942486-06:00",
+  "LastSaved": "2024-03-17T03:39:13.0312891-06:00",
+  "ResourceVersion": 1,
+  "__version": 1,
   "__references": []
 }
