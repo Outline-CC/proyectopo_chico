@@ -82,7 +82,7 @@
           "__guid": "789f0197-30e0-4426-a10f-b0404afcd53e",
           "card": {
             "_type": "gameobject",
-            "go": "98d52e1b-b512-4649-9c3b-67c51b7c738e"
+            "go": "a303ce2e-2012-4dbb-93d3-5dfecfe903eb"
           },
           "enemy": {
             "_type": "gameobject",
@@ -124,20 +124,187 @@
       ]
     },
     {
-      "__guid": "98d52e1b-b512-4649-9c3b-67c51b7c738e",
-      "Name": "CARD",
-      "Position": "-374.9976,-96.96267,83.72582",
+      "__guid": "a303ce2e-2012-4dbb-93d3-5dfecfe903eb",
+      "Name": "CARD 1",
+      "Position": "-667.344,597.8926,-339.9671",
+      "Rotation": "-0.7071068,-0.0000001490116,0.7071068,-0.0000001490116",
+      "Scale": "4.08385,2.225199,2.629225",
+      "Tags": "card",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
         {
+          "__type": "ModelRenderer",
+          "__guid": "34c4b958-0cb0-4915-9d89-fe9fdddf73d5",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
           "__type": "Card",
-          "__guid": "0067f997-0c17-4e20-b98f-a9266d910952",
+          "__guid": "2fd79d30-0def-4338-9365-d286ea284c83",
           "Description": "Lorem Ipsum",
           "EffectImpact": 6,
           "EnergyCost": 1,
           "Name": "Strike",
           "Type": "Attack"
+        },
+        {
+          "__type": "PlaneCollider",
+          "__guid": "ca628e1c-2606-4b83-8c89-7ead40efa62d",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100",
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "30877620-1d2a-4f70-b6b8-772a84569c1f",
+      "Name": "CARD 2",
+      "Position": "-667.3439,312.9077,-339.9671",
+      "Rotation": "-0.7071068,-0.0000001490116,0.7071068,-0.0000001490116",
+      "Scale": "4.08385,2.225199,2.629225",
+      "Tags": "card",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "ca49c94e-cbcc-402f-8470-fd7823e4306f",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Card",
+          "__guid": "d27c6b4d-314d-409c-9ed2-219b1d17f472",
+          "Description": "Lorem Ipsum",
+          "EffectImpact": 6,
+          "EnergyCost": 1,
+          "Name": "Strike",
+          "Type": "Attack"
+        },
+        {
+          "__type": "PlaneCollider",
+          "__guid": "01f50cb7-215f-41bd-9d96-95fc5cdcf618",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100",
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "7bbc1274-947d-4fea-be62-31492a06ad13",
+      "Name": "CARD 3",
+      "Position": "-667.3439,21.45363,-339.9672",
+      "Rotation": "-0.7071068,-0.0000001490116,0.7071068,-0.0000001490116",
+      "Scale": "4.08385,2.225199,2.629225",
+      "Tags": "card",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "ced93c70-20b7-4560-b9a7-9c09c084f2d3",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Card",
+          "__guid": "d1310dbc-d7c4-4395-b724-c06bf2bca95c",
+          "Description": "Lorem Ipsum",
+          "EffectImpact": 6,
+          "EnergyCost": 1,
+          "Name": "Strike",
+          "Type": "Attack"
+        },
+        {
+          "__type": "PlaneCollider",
+          "__guid": "f6b28b9f-1ed8-4dcc-b2ab-a2a24f35db41",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100",
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "4413ae87-a987-42ea-a9ff-8b73dc1029fb",
+      "Name": "CARD 4",
+      "Position": "-667.3439,-271.0334,-339.9673",
+      "Rotation": "-0.7071068,-0.0000001490116,0.7071068,-0.0000001490116",
+      "Scale": "4.08385,2.225199,2.629225",
+      "Tags": "card",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "6ed4ecf6-f289-4107-b2ab-3952c976c5c0",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Card",
+          "__guid": "a6b594ab-8590-4ea8-a255-2729d35db573",
+          "Description": "Lorem Ipsum",
+          "EffectImpact": 6,
+          "EnergyCost": 1,
+          "Name": "Strike",
+          "Type": "Attack"
+        },
+        {
+          "__type": "PlaneCollider",
+          "__guid": "e4d269a9-5fe5-4e5b-90b0-1bf273d25d5b",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100",
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "a062dac4-876d-46d3-893e-f9202d9d07c3",
+      "Name": "CARD 5",
+      "Position": "-667.3439,-561.5155,-339.9674",
+      "Rotation": "-0.7071068,-0.0000001490116,0.7071068,-0.0000001490116",
+      "Scale": "4.08385,2.225199,2.629225",
+      "Tags": "card",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "c9a97283-074e-447d-b5ad-5d8a9bd01981",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Card",
+          "__guid": "29608d1e-ad83-4624-96f1-3dc9d40e0219",
+          "Description": "Lorem Ipsum",
+          "EffectImpact": 6,
+          "EnergyCost": 1,
+          "Name": "Strike",
+          "Type": "Attack"
+        },
+        {
+          "__type": "PlaneCollider",
+          "__guid": "65c780cc-adb7-42e6-a561-1b2ac86eab1e",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100",
+          "Static": true
         }
       ]
     }
@@ -165,7 +332,7 @@
   },
   "Title": "battle phase",
   "Description": "",
-  "LastSaved": "2024-03-17T03:24:25.3074439-06:00",
+  "LastSaved": "2024-03-17T05:29:15.7117241-06:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

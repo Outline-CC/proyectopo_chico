@@ -16,7 +16,7 @@ public class Player : Component
 	public Player()
 	{
 		LifePoints = 100;
-		Energy = 3;
+		Energy = 0;
 		Deck = new Deck().StartingDeck();
 		Strength = 0;
 		Defense = 0;
@@ -30,7 +30,7 @@ public class Player : Component
 		Log.Info("Start turn");
 		Energy += 3;
 		Deck.Shuffle();
-		DrawCards( 4 );
+		DrawCards( 5 );
 	}
 
 
@@ -45,9 +45,19 @@ public class Player : Component
 			Deck.Shuffle();
 		}
 		List<Card> drawnCards = Deck.Draw( numberOfCards );
+		int i = 1;
 		foreach ( var card in drawnCards )
 		{
-			Log.Info( card.Name);
+			string objName = "CARD " + i.ToString();
+			i++;
+			//Log.Info(objName);
+			//Log.Info(Scene.Directory.FindByName(objName));
+			Scene.Children.Find(x => x.Name == objName)
+			.Components.Get<Card>(FindMode.EverythingInSelf)
+			.SetData(card.Name, card.EnergyCost, card.Type, card.EffectImpact, card.Description);
+			//Log.Info(Scene.Children.Find(x => x.Name == objName)
+			//.Components.Get<Card>(FindMode.EverythingInSelf).Name);
+
 		}
 		Hand.AddRange( drawnCards );
 	}
@@ -58,26 +68,28 @@ public class Player : Component
 		Card playCard = card.Components.Get<Card>();
 		Enemy playEnemy = target.Components.Get<Enemy>();
 		// Assuming 'card' is a card from the hand
-		if ( Hand.Contains( playCard ) )
-		{
+		//if ( Hand.Contains( playCard ) )
+		//{
 			if (Energy >= playCard.EnergyCost)
 			{
 				// Implement the logic of using the card based on its type, effects, etc.
-				Log.Info( $"Playing {card.Name} on {playEnemy.Name}" );
+				Log.Info( $"Playing {playCard.Name} on {playEnemy.Name}" );
 				Energy -= playCard.EnergyCost;
 				// For simplicity, just remove the card from hand and add to discard pile
 				Hand.Remove( playCard );
 				DiscardPile.AddCard( playCard );
+				card.Destroy();
+				Log.Info( $"Player energy left: {Energy}" );
 			}
 			else
 			{
 				Log.Info( "Not enough energy to play card" );
 			}
-		}
-		else
-		{
-			Log.Info( "Card is not in hand." );
-		}
+		//}
+		//else
+		//{
+		//	Log.Info( "Card is not in hand." );
+		//}
 	}
 	public void EndTurn()
 	{

@@ -14,38 +14,37 @@ public sealed class BattleManager : Component
 	[Property]
 	GameObject card { get; set; }
 
-	public BattleManager()
-	{
-		enemy.Player = player;
-	}
-
-	protected override void OnStart()
-	{
-		cardToPlay = player.MyDeck.Cards[0];
-		Log.Info( "Hello world!" );
-		Log.Info( "Deck size: " + player.MyDeck.Cards.Count);
-		Log.Info( "Player: E=" + player.Energy);
-		Log.Info( "Enemy: E=" + enemy.Energy);
-	}
 	protected override void OnUpdate()
 	{
 		if ( battleContinues )
 		{
-			if( Input.Pressed( "attack2" ) )
-			{
-				Log.Info( "ACT" );
+			//if( Input.Pressed( "attack2" ) )
+			//{
+				//Log.Info( "ACT" );
 				switch ( step )
 				{
 					// DRAW PHASE
 					case 0: DrawPhase(); break;
-					// PLAYER BATTLE PHASE
-					case 1: PlayerBattle(); break;
-					// END PLAYER TURN
-					case 2: EndTurn(); break;
-					// ENEMY ACTION
 					case 3: break;
 					default: break;
 				}
+			//}
+			if (Input.Pressed("attack1"))
+			{
+				//Log.Info( "ACT" );
+				var mouseray = Scene.Camera.ScreenPixelToRay(Mouse.Position);
+				SceneTraceResult ray = Scene.Trace.Ray(mouseray.Position, mouseray.Forward * int.MaxValue).Run();
+				if (ray.Hit)
+				{
+					if(ray.GameObject.Tags.ToString().Contains("card"))
+					Log.Info(ray.GameObject.Components.Get<Card>( FindMode.EverythingInSelf ).Name);
+					PlayerBattle(ray.GameObject);
+				}
+			}
+			if (Input.Pressed("use"))
+			{
+				EndTurn();
+				step = 0;
 			}
 		}
 	}
@@ -55,7 +54,7 @@ public sealed class BattleManager : Component
 		player.Components.Get<Player>().StartTurn();
 		step = 1;
 	}
-	void PlayerBattle()
+	void PlayerBattle(GameObject card)
 	{
 		player.Components.Get<Player>().PlayCard(card, enemy);
 	}
