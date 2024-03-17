@@ -6,14 +6,15 @@ class PlayerProperties
     {
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(deck, options);
-        File.WriteAllText(filePath, jsonString);
+        // NO JALA FILE
+        //File.WriteAllText(filePath, jsonString);
     }
 
     // todo: replace void for Deck type
     public void LoadDeckFromFile(string filePath)
     {
-        string jsonString = File.ReadAllText(filePath);
-        Deck deck = JsonSerializer.Deserialize<Deck>(jsonString);
+        //string jsonString = File.ReadAllText(filePath);
+        //Deck deck = JsonSerializer.Deserialize<Deck>(jsonString);
         //return deck;
     }
 }
